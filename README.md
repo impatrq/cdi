@@ -1,23 +1,47 @@
-# Intro a Control de Interfaces
+# Especificaciones
 
-Bienvenidos a `Control de Interfaces`, parte del módulo de `Instrumental y Sistemas Eléctricos`. El objetivo de esta materia es ayudarles a empezar a programar y entender algunos conceptos básicos de algoritmos y resolución de problemas en distintos lenguajes de programación.
+1- Implementar en un archivo `hello.c` un programa que:
+- Imprima un mensaje pidiendo el nombre de la persona que ejecuta el programa.
+- Imprima un mensaje saludando a la persona que ingresó el nombre.
 
-Algunas de las cosas que vamos a estar trabajando son:
+2- Luego, escribir un `README.md` con lo siguiente:
 
-- Algoritmos y programación estructurada.
-- Estructuras de control, bucles, condicionales, funciones y procedimientos.
-- Manejo de constantes, variables y arreglos o vectores.
-- Programación de microcontroladores y control de puertos digitales y analógicos.
+```markdown
+# Hello
 
-Vamos a arrancar usando algo de lenguaje `C` para empezar a manejar algunos de estos conceptos para mas adelante usar un lenguaje de mas alto nivel que se llama `Python`.
+Alumno: Nombre y apellido
+Curso: Curso
+Materia: Control de Interfaces
 
-Para empezar, todos van a necesitar una cuenta de [GitHub](https://github.com/) con su correo personal asociado. Esta es una página muy útil para tener repositorios y poder trabajar remotamente con otras personas si fuera necesario.
+Colaboradores: Alumnos con los que trabajaron
+```
 
-## Lista de programas y herramientas
+## Orientación
 
-Para hacer todo esto, vamos a necesitar algunas herramientas:
+- Van a necesitar trabajar con un tipo de dato especial, una cadena de caracteres, que en otros lenguajes se denomina `string`. No vamos a entrar en detalles ahora en lo que es una cadena de caracteres, pero vamos a declararla de la siguiente forma:
 
-- Algún editor de código. Hay varios dando vuelta, pero particularmente recomiendo [Visual Studio Code](https://code.visualstudio.com/).
-- Instalar [Mingw](https://www.youtube.com/watch?v=wC-aHZ87sic&t=2s&ab_channel=FabrizioCarlassara) para tener un compilador de `C` en nuestra computadora. Vean el video de como instalarlo.
-- Descarguen [Git para Windows](https://git-scm.com/download/win) e instálenlo. Verifiquen en la terminal de Windows la instalación escribiendo el comando `git`. Si fue correcta, tienen que ver un mensaje de ayuda.
-- Una sugerencia adicional que puede hacer que subir actividades sea mas fácil es que puedan descargar [GitHub Desktop](https://desktop.github.com/).
+```c
+/* Puedo almacenar hasta 20 caracteres */
+char name[20];
+```
+
+- Para tratar con esta cadena, sugerimos la función `scanf`:
+
+```c
+/* name es la variable donde queremos que se guarde el texto */
+scanf("%s", name);
+```
+
+## Como probar el código
+
+Abrir una terminal y escribir:
+
+```
+gcc -o hello hello.c
+./hello
+```
+
+## Como entregar
+
+1- Crear una rama nueva con el nombre `cdi-01`
+2- Subir el `README.md` y el `hello.c`
