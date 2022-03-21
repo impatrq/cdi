@@ -43,6 +43,6 @@ gcc -o hello hello.c
 
 ## Como entregar
 
-1- Crear una rama nueva con el nombre `cdi-01`
+1- Crear un repositorio nuevo con el nombre `cdi-01`
 
 2- Subir el `README.md` y el `hello.c`
