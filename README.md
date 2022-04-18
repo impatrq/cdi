@@ -9,9 +9,7 @@ Escribir un programa que:
 index = 0.0588 * L - 0.296 * S - 15.8
 ```
 
-Donde:
-- `L` es la cantidad de letras cada 100 palabras.
-- `S` es la cantidad de oraciones cada 100 palabras.
+Donde: `L` es la cantidad de letras cada 100 palabras y `S` es la cantidad de oraciones cada 100 palabras.
 
   - Imprima el grado de dificultad del texto teniendo en cuenta que:
     - Si da un grado menor a uno se imprima `Before Grade 1`.
