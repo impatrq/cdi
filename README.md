@@ -47,5 +47,4 @@ gcc -o cajero cajero.c
 ## Como entregar
 
 1- Crear un repositorio nuevo con el nombre `cdi-02`
-
 2- Subir el `README.md` y el `cajero.c`
