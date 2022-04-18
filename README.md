@@ -44,6 +44,8 @@ while (text[i] != '\0') {
 }
 ```
 
+- Pueden usar la funcion `round()` de `math.h` para redondear un float al entero mas cercano. Ejemplos [aqui](https://fresh2refresh.com/c-programming/c-arithmetic-functions/c-round-function/).
+
 ## Como probar el código
 
 Abrir una terminal y escribir:
