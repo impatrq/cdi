@@ -16,6 +16,8 @@ Donde: `L` es la cantidad de letras cada 100 palabras y `S` es la cantidad de or
     - Si da mayor a 16, se imprima `Grade 16+`.
     - Cualquier caso intermedio, se redondea el resultado de la cuenta anterior al entero mas cercano. Ejemplo, si da 13.2 se imprime `Grade 13` y si da 2.6 se imprime `Grade 3`.
 
+  - El programa debe verificar correctamente todos los archivos en la carpeta `texts`. 
+
 Luego, armar un `README.md` con lo siguiente:
 
 ```markdown
