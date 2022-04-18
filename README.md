@@ -55,6 +55,8 @@ gcc -o readability readability.c
 
 Donde `text` es el nombre de uno de los archivos (sin extension) que se encuentran en la carpeta `texts`.
 
+El resultado esperado debe coincidir con lo que indiquen los nombres de los archivos.
+
 ## Como entregar
 
 - Crear un repositorio nuevo con el nombre `cdi-03`.
