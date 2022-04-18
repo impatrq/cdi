@@ -1,23 +1,63 @@
-# Intro a Control de Interfaces
+# Especificaciones
 
-Bienvenidos a `Control de Interfaces`, parte del módulo de `Instrumental y Sistemas Eléctricos`. El objetivo de esta materia es ayudarles a empezar a programar y entender algunos conceptos básicos de algoritmos y resolución de problemas en distintos lenguajes de programación.
+Escribir un programa que: 
+  - Tome como entrada el nombre de uno de los archivos en la carpeta `texts` (sin extensión).
+  - Cuente la cantidad de letras, palabras y oraciones en el texto.
+  - Calcule el grado de dificultad del texto en base a la siguiente [formula](https://en.wikipedia.org/wiki/Coleman%E2%80%93Liau_index#:~:text=The%20Coleman%E2%80%93Liau%20index%20is,necessary%20to%20comprehend%20the%20text.):
 
-Algunas de las cosas que vamos a estar trabajando son:
+```
+index = 0.0588 * L - 0.296 * S - 15.8
+```
 
-- Algoritmos y programación estructurada.
-- Estructuras de control, bucles, condicionales, funciones y procedimientos.
-- Manejo de constantes, variables y arreglos o vectores.
-- Programación de microcontroladores y control de puertos digitales y analógicos.
+Donde:
+- `L` es la cantidad de letras cada 100 palabras.
+- `S` es la cantidad de oraciones cada 100 palabras.
 
-Vamos a arrancar usando algo de lenguaje `C` para empezar a manejar algunos de estos conceptos para mas adelante usar un lenguaje de mas alto nivel que se llama `Python`.
+  - Imprima el grado de dificultad del texto teniendo en cuenta que:
+    - Si da un grado menor a uno se imprima `Before Grade 1`.
+    - Si da mayor a 16, se imprima `Grade 16+`.
+    - Cualquier caso intermedio, se redondea el resultado de la cuenta anterior al entero mas cercano. Ejemplo, si da 13.2 se imprime `Grade 13` y si da 2.6 se imprime `Grade 3`.
 
-Para empezar, todos van a necesitar una cuenta de [GitHub](https://github.com/) con su correo personal asociado. Esta es una página muy útil para tener repositorios y poder trabajar remotamente con otras personas si fuera necesario.
+Luego, armar un `README.md` con lo siguiente:
 
-## Lista de programas y herramientas
+```markdown
+# Readability
 
-Para hacer todo esto, vamos a necesitar algunas herramientas:
+Alumno: Nombre y apellido
+Curso: Curso
+Materia: Control de Interfaces
 
-- Algún editor de código. Hay varios dando vuelta, pero particularmente recomiendo [Visual Studio Code](https://code.visualstudio.com/).
-- Instalar [Mingw](https://www.youtube.com/watch?v=wC-aHZ87sic&t=2s&ab_channel=FabrizioCarlassara) para tener un compilador de `C` en nuestra computadora. Vean el video de como instalarlo.
-- Descarguen [Git para Windows](https://git-scm.com/download/win) e instálenlo. Verifiquen en la terminal de Windows la instalación escribiendo el comando `git`. Si fue correcta, tienen que ver un mensaje de ayuda.
-- Una sugerencia adicional que puede hacer que subir actividades sea mas fácil es que puedan descargar [GitHub Desktop](https://desktop.github.com/).
+Colaboradores: Alumnos con los que trabajaron
+```
+
+## Orientacion
+
+- Para detectar una letra pueden usar la funcion `isalpha()` de la biblioteca `ctype.h` que devuelve `true` si el caracter es alfabetico. Ejemplos [aqui](https://www.programiz.com/c-programming/library-function/ctype.h/isalpha).
+- Consideren que una palabra es cuando detectan un espacio y una oración cuando detectan alguno de estos caracteres: `.`, `!` o `?`.
+- Pueden usar la función `isspace()` de la biblioteca `ctype.h` que devuelve `true` si el el caracter es un espacio. Algunos ejemplos [aquí](https://www.programiz.com/c-programming/library-function/ctype.h/isspace).
+- Pueden aprovechar el fin de cadena o caracter nulo `\0` para hacer algo como esto:
+
+```c
+int i = 0;
+
+while (text[i] != '\0') {
+  ...
+  i++;
+}
+```
+
+## Como probar el código
+
+Abrir una terminal y escribir:
+
+```
+gcc -o readability readability.c
+./readability text
+```
+
+Donde `text` es el nombre de uno de los archivos (sin extension) que se encuentran en la carpeta `texts`.
+
+## Como entregar
+
+- Crear un repositorio nuevo con el nombre `cdi-03`.
+- Subir el `README.md` y el `cajero.c`.
