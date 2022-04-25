@@ -20,4 +20,13 @@ Para hacer todo esto, vamos a necesitar algunas herramientas:
 - Algún editor de código. Hay varios dando vuelta, pero particularmente recomiendo [Visual Studio Code](https://code.visualstudio.com/).
 - Instalar [Mingw](https://www.youtube.com/watch?v=wC-aHZ87sic&t=2s&ab_channel=FabrizioCarlassara) para tener un compilador de `C` en nuestra computadora. Vean el video de como instalarlo.
 - Descarguen [Git para Windows](https://git-scm.com/download/win) e instálenlo. Verifiquen en la terminal de Windows la instalación escribiendo el comando `git`. Si fue correcta, tienen que ver un mensaje de ayuda.
-- Una sugerencia adicional que puede hacer que subir actividades sea mas fácil es que puedan descargar [GitHub Desktop](https://desktop.github.com/).
+
+## Actividades
+
+- [Hola mundo][act01]
+- [Cajero][act02]
+- [Indice de Coleman-Liau][act03]
+
+[act01]: https://github.com/impatrq/cdi/tree/act01/hello
+[act02]: https://github.com/impatrq/cdi/tree/act02/cajero
+[act03]: https://github.com/impatrq/cdi/tree/act03/readability
