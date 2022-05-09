@@ -64,4 +64,4 @@ El resultado esperado debe coincidir con lo que indiquen los nombres de los arch
 ## Como entregar
 
 - Crear un repositorio nuevo con el nombre `cdi-03`.
-- Subir el `README.md` y el `cajero.c`.
+- Subir el `README.md` y el `readability.c`.
