@@ -37,9 +37,15 @@ int read_file(char *text, char *filename) {
     if (!fp) {
         return 1;
     } 
-    while ((c = getc(fp)) != EOF) {
+    
+    do {
+        c = getc(fp);
         *text = c;
         text++;
-    }
+    } while (c != EOF);
+    
+    text--;
+    *text = '\0';
+    
     return 0;
 }
