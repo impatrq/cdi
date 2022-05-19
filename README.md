@@ -1,32 +1,51 @@
-# Intro a Control de Interfaces
+# Especificaciones
 
-Bienvenidos a `Control de Interfaces`, parte del módulo de `Instrumental y Sistemas Eléctricos`. El objetivo de esta materia es ayudarles a empezar a programar y entender algunos conceptos básicos de algoritmos y resolución de problemas en distintos lenguajes de programación.
+Escribir un programa para la Raspberry Pico que: 
+  - Lea el estado de un pin de entrada que va a estar conectado a un pulsador.
+  - Mientras el pulsador este presionado, el built in LED de la Raspberry Pico (GPIO25) tiene que parpadear cada 500 ms.
+  - Cuando el pulsador se suelte, el LED debe dejar de parpadear y quedar en el ultimo estado que se encontraba.
 
-Algunas de las cosas que vamos a estar trabajando son:
+Luego, armar un `README.md` con lo siguiente:
 
-- Algoritmos y programación estructurada.
-- Estructuras de control, bucles, condicionales, funciones y procedimientos.
-- Manejo de constantes, variables y arreglos o vectores.
-- Programación de microcontroladores y control de puertos digitales y analógicos.
+```markdown
+# GPIO
 
-Vamos a arrancar usando algo de lenguaje `C` para empezar a manejar algunos de estos conceptos para mas adelante usar un lenguaje de mas alto nivel que se llama `Python`.
+Alumno: Nombre y apellido
+Curso: Curso
+Materia: Control de Interfaces
 
-Para empezar, todos van a necesitar una cuenta de [GitHub](https://github.com/) con su correo personal asociado. Esta es una página muy útil para tener repositorios y poder trabajar remotamente con otras personas si fuera necesario.
+Colaboradores: Alumnos con los que trabajaron
+```
 
-## Lista de programas y herramientas
+## Orientacion
 
-Para hacer todo esto, vamos a necesitar algunas herramientas:
+- Datasheet del [RP2040][rp2040].
+- Datasheet de la [Raspberry Pico][pico].
+- Raspberry Pico [SDK][sdk] para C/C++.
+- Pinout de la Raspberry Pico:
 
-- Algún editor de código. Hay varios dando vuelta, pero particularmente recomiendo [Visual Studio Code](https://code.visualstudio.com/).
-- Instalar [Mingw](https://www.youtube.com/watch?v=wC-aHZ87sic&t=2s&ab_channel=FabrizioCarlassara) para tener un compilador de `C` en nuestra computadora. Vean el video de como instalarlo.
-- Descarguen [Git para Windows](https://git-scm.com/download/win) e instálenlo. Verifiquen en la terminal de Windows la instalación escribiendo el comando `git`. Si fue correcta, tienen que ver un mensaje de ayuda.
+![pinout][pinout]
 
-## Actividades
+## Como compilar y grabar el programa
 
-- [Hola mundo][act01]
-- [Cajero][act02]
-- [Indice de Coleman-Liau][act03]
+- Abrir la consola de comandos dentro del directorio del proyecto y escribir:
 
-[act01]: https://github.com/impatrq/cdi/tree/act01/hello
-[act02]: https://github.com/impatrq/cdi/tree/act02/cajero
-[act03]: https://github.com/impatrq/cdi/tree/act03/readability
+```bash
+mkdir build
+cd build
+cmake -G "MinGW Makefiles" ..
+make
+```
+
+- Conectar la Raspberry Pico a la computadora precionando el boton de BOOTSEL y esperar a que aparezca como un dispositivo de almacenamiento.
+- Luego, entrar a build y buscar el archivo `gpio.uf2` y copiarlo en la Raspberry Pico.
+
+## Entrega
+
+- Crear un repositorio con el nombre `cdi-04`.
+- Subir el `README.md` y `main.c`.
+
+[rp2040]: https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf
+[pico]: https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf
+[sdk]: https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf
+[pinout]: https://www.raspberrypi.com/documentation/microcontrollers/images/Pico-R3-SDK11-Pinout.svg
