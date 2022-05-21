@@ -27,8 +27,10 @@ Para hacer todo esto, vamos a necesitar algunas herramientas:
 - [Cajero][act02]
 - [Indice de Coleman-Liau][act03]
 - [GPIO][act04]
+- [7 Segmentos][act05]
 
 [act01]: https://github.com/impatrq/cdi/tree/act01/hello
 [act02]: https://github.com/impatrq/cdi/tree/act02/cajero
 [act03]: https://github.com/impatrq/cdi/tree/act03/readability
 [act04]: https://github.com/impatrq/cdi/tree/act04/gpio
+[act05]: https://github.com/impatrq/cdi/tree/act05/7segmentos
