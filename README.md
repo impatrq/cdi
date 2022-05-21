@@ -1,14 +1,16 @@
 # Especificaciones
 
 Escribir un programa para la Raspberry Pico que: 
-  - Lea el estado de un pin de entrada que va a estar conectado a un pulsador.
-  - Mientras el pulsador este presionado, el built in LED de la Raspberry Pico (GPIO25) tiene que parpadear cada 500 ms.
-  - Cuando el pulsador se suelte, el LED debe dejar de parpadear y quedar en el ultimo estado que se encontraba.
+  - Muestre en un display 7 segmentos valores del 0 al 9 (arrancando en 0).
+  - Al presionar un pulsador, el valor mostrado debe incrementarse.
+  - Al presionar un segundo pulsador, el valor mostrado debe decrementarse.
+  - Con un tercer pulsador, el valor debe resetearse.
+  - El valor mostrado nunca salirse del rango 0 a 9.
 
 Luego, armar un `README.md` con lo siguiente:
 
 ```markdown
-# GPIO
+# 7 Segmentos
 
 Alumno: Nombre y apellido
 Curso: Curso
@@ -26,6 +28,16 @@ Colaboradores: Alumnos con los que trabajaron
 
 ![pinout][pinout]
 
+- Pinout de un 7 segmentos:
+
+![7segment][7segment]
+
+- Puede ser util diagramar una tabla con los valores necesarios para formar cada numero. Esta tabla puede verse asi (suponiendo que G el mas significativo):
+
+|Numero|G|F|E|D|C|B|A|Hex|
+|---|---|---|---|---|---|---|---|---|
+|0|1|1|1|1|1|1|0|0x3f|
+
 ## Como compilar y grabar el programa
 
 - Abrir la consola de comandos dentro del directorio del proyecto y escribir:
@@ -42,10 +54,11 @@ make
 
 ## Entrega
 
-- Crear un repositorio con el nombre `cdi-04`.
+- Crear un repositorio con el nombre `cdi-05`.
 - Subir el `README.md` y `main.c`.
 
 [rp2040]: https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf
 [pico]: https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf
 [sdk]: https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf
 [pinout]: https://www.raspberrypi.com/documentation/microcontrollers/images/Pico-R3-SDK11-Pinout.svg
+[7segment]: https://protosupplies.com/wp-content/uploads/2018/02/7-Segment-CA-Pinout-2.jpg
