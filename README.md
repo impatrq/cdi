@@ -1,16 +1,21 @@
 # Especificaciones
 
 Escribir un programa para la Raspberry Pico que: 
-  - Muestre en un display 7 segmentos valores del 0 al 9 (arrancando en 0).
-  - Al presionar un pulsador, el valor mostrado debe incrementarse.
-  - Al presionar un segundo pulsador, el valor mostrado debe decrementarse.
-  - Con un tercer pulsador, el valor debe resetearse.
-  - El valor mostrado nunca salirse del rango 0 a 9.
+  - Lea el estado de cuatro pulsadores.
+  - Muestre en la primer fila de un display 16x2 los pulsadores que estan abiertos.
+  - Muestre en la segunda fila los pulsadores que estan cerrados o apretados.
+
+Ejemplo, si los pulsadores conectados a los pines 4 y 6 estan cerrados pero los conectados a los pines 5 y 7 estan abiertos, el display deberia decir algo como:
+
+```
+Abiertos:5|7
+Cerrados:4|6
+```
 
 Luego, armar un `README.md` con lo siguiente:
 
 ```markdown
-# 7 Segmentos
+# LCD 16x2
 
 Alumno: Nombre y apellido
 Curso: Curso
@@ -24,19 +29,12 @@ Colaboradores: Alumnos con los que trabajaron
 - Datasheet del [RP2040][rp2040].
 - Datasheet de la [Raspberry Pico][pico].
 - Raspberry Pico [SDK][sdk] para C/C++.
+- Ejemplo de Wokwi de un [LCD16x2][ejemplo]
 - Pinout de la Raspberry Pico:
 
 ![pinout][pinout]
 
-- Pinout de un 7 segmentos:
-
-![7segment][7segment]
-
-- Puede ser util diagramar una tabla con los valores necesarios para formar cada numero. Esta tabla puede verse asi (suponiendo que G el mas significativo):
-
-|Numero|G|F|E|D|C|B|A|Hex|
-|---|---|---|---|---|---|---|---|---|
-|0|1|1|1|1|1|1|0|0x3f|
+- Recuerden que solo tienen hasta 16 caracteres para escribir en una fila.
 
 ## Como compilar y grabar el programa
 
@@ -50,15 +48,15 @@ make
 ```
 
 - Conectar la Raspberry Pico a la computadora precionando el boton de BOOTSEL y esperar a que aparezca como un dispositivo de almacenamiento.
-- Luego, entrar a build y buscar el archivo `gpio.uf2` y copiarlo en la Raspberry Pico.
+- Luego, entrar a build y buscar el archivo `lcd.uf2` y copiarlo en la Raspberry Pico.
 
 ## Entrega
 
-- Crear un repositorio con el nombre `cdi-05`.
+- Crear un repositorio con el nombre `cdi-06`.
 - Subir el `README.md` y `main.c`.
 
 [rp2040]: https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf
 [pico]: https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf
 [sdk]: https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf
 [pinout]: https://www.raspberrypi.com/documentation/microcontrollers/images/Pico-R3-SDK11-Pinout.svg
-[7segment]: https://protosupplies.com/wp-content/uploads/2018/02/7-Segment-CA-Pinout-2.jpg
+[ejemplo]: https://wokwi.com/projects/336854839535338066
