@@ -28,9 +28,11 @@ Para hacer todo esto, vamos a necesitar algunas herramientas:
 - [Indice de Coleman-Liau][act03]
 - [GPIO][act04]
 - [7 Segmentos][act05]
+- [LCD 16x2][act06]
 
 [act01]: https://github.com/impatrq/cdi/tree/act01/hello
 [act02]: https://github.com/impatrq/cdi/tree/act02/cajero
 [act03]: https://github.com/impatrq/cdi/tree/act03/readability
 [act04]: https://github.com/impatrq/cdi/tree/act04/gpio
 [act05]: https://github.com/impatrq/cdi/tree/act05/7segmentos
+[act06]: https://github.com/impatrq/cdi/tree/act06/lcd16x2
