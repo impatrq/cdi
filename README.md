@@ -57,8 +57,8 @@ make
 - Crear un repositorio con el nombre `cdi-05`.
 - Subir el `README.md` y `main.c`.
 
-[rp2040]: https://www.raspberrypi.com/documentation/microcontrollers/images/pico-pinout.svg
+[rp2040]: https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf
 [pico]: https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf
 [sdk]: https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf
-[pinout]: https://www.raspberrypi.com/documentation/microcontrollers/images/Pico-R3-SDK11-Pinout.svg
+[pinout]: https://www.raspberrypi.com/documentation/microcontrollers/images/pico-pinout.svg
 [7segment]: https://protosupplies.com/wp-content/uploads/2018/02/7-Segment-CA-Pinout-2.jpg
